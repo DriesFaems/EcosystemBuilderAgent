@@ -32,7 +32,7 @@ if clicked:
         template='You are an ecosystem specialist that needs to identify the neccessary partners for {company} in the business ecosystem to realize {project_description}. Make a clear distinction between complementors and intermediaries. Complementors are entities that provide complementary goods or services that enhance the value of another companys product or service. They are not part of the direct supply chain but add value to the end product. Intermediaries, on the other hand, are entities that facilitate the connection between different stages of the value chain, often between the producer and the consumer. They do not produce the primary value but rather support its delivery.')
     complementors_chain = LLMChain(llm=llm, prompt = complementors_template, verbose=True)
     complementors = complementors_chain.run(company=company, project_description=prompt)
-    st.markdown('**The most important complementors and intermediaries are**')
+    st.markdown('**The most important complmentors and intermediaries are**')
     st.write(complementors)
     #identfication of minimal viable ecosystem
     MVE_template = PromptTemplate(
