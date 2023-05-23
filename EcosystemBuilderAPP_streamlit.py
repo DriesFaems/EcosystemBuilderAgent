@@ -15,6 +15,8 @@ st.title("EcosystemBuilderAgent")
 
 st.write("This agent leverages the GPT large language model to automate the building of ecosystems for specific projects. Following the Value Blueprint Framework of Ron Adner (2012, The Wide Lens), this agent will (1) automatically identify important complementors and intermediaries for your project, (2) provide a description of the minimal viable ecosystem, and (3) analyze the most important ecosystem risks. This agent is developed by Dries Faems, Professor of Entrepreneurship, Innovation and Technological Transformation at the WHU Otto Beisheim School of Management.")
 
+st.write("To access the book of Ron Adner, go to https://ronadner.com/book/the-wide-lens/ There is a free excerpt of Chapter 1 that gives introduction to the Value Blueprint Framework.")
+
 #define company and project
 
 open_api_key = st.text_input('Enter your open api key. This information is not recorded or stored in any way', type = "password")
@@ -32,7 +34,7 @@ if clicked:
         template='You are an ecosystem specialist that needs to identify the neccessary partners for {company} in the business ecosystem to realize {project_description}. Make a clear distinction between complementors and intermediaries. Complementors are entities that provide complementary goods or services that enhance the value of another companys product or service. They are not part of the direct supply chain but add value to the end product. Intermediaries, on the other hand, are entities that facilitate the connection between different stages of the value chain, often between the producer and the consumer. They do not produce the primary value but rather support its delivery.')
     complementors_chain = LLMChain(llm=llm, prompt = complementors_template, verbose=True)
     complementors = complementors_chain.run(company=company, project_description=prompt)
-    st.markdown('**The most important complmentors and intermediaries are**')
+    st.markdown('**The most important complementors and intermediaries are**')
     st.write(complementors)
     #identfication of minimal viable ecosystem
     MVE_template = PromptTemplate(
