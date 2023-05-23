@@ -15,7 +15,7 @@ st.title("EcosystemBuilderAgent")
 
 st.write("This agent leverages the GPT large language model to automate the building of ecosystems for specific projects. Following the Value Blueprint Framework of Ron Adner (2012, The Wide Lens), this agent will (1) automatically identify important complementors and intermediaries for your project, (2) provide a description of the minimal viable ecosystem, and (3) analyze the most important ecosystem risks. This agent is developed by Dries Faems, Professor of Entrepreneurship, Innovation and Technological Transformation at the WHU Otto Beisheim School of Management.")
 
-st.write("If you want to know more about the ecosystem value blueprint, check out the book of Ron Adnere here: https://ronadner.com/book/the-wide-lens/. You can check out the first chapter for free!")
+st.write("If you want to know more about the ecosystem value blueprint, check out the book of Ron Adner here: https://ronadner.com/book/the-wide-lens/. You can check out the first chapter for free!")
 #define company and project
 
 open_api_key = st.text_input('Enter your open api key. This information is not recorded or stored in any way', type = "password")
